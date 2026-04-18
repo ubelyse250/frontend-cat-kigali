@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoKigali | Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --primary-green: #00a650; }
+        body { font-family: 'Segoe UI', sans-serif; }
+        .navbar { background-color: var(--primary-green) !important; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">🌱 EcoKigali</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="report.html">Report Issue</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="social.html">Social</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-success fw-bold px-4 ms-3" 
+                           data-bs-toggle="modal" data-bs-target="#prototypeModal">
+                            GUI Prototype
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h2 class="section-header text-center mb-5">Upcoming Community Events</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <span class="badge bg-success">April 26, 2026</span>
+                        <h5>Umuganda – Gasabo</h5>
+                        <p>Clean-up around Kimihurura market.</p>
+                        <button onclick="joinEvent(1)" class="btn btn-outline-success w-100">Register</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <span class="badge bg-success">May 3, 2026</span>
+                        <h5>Tree Planting – Kicukiro</h5>
+                        <p>Plant 2,000 trees in wetlands.</p>
+                        <button onclick="joinEvent(2)" class="btn btn-outline-success w-100">Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <span class="badge bg-success">May 10, 2026</span>
+                        <h5>Recycling Workshop – Nyarugenge</h5>
+                        <p>Turn plastic into useful products.</p>
+                        <button onclick="joinEvent(3)" class="btn btn-outline-success w-100">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <p>EcoKigali © 2026 | <a href="https://github.com/uwizeye/frontend-cat-kigali" target="_blank" class="text-white">GitHub Repo</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- GUI PROTOTYPE MODAL -->
+    <div class="modal fade" id="prototypeModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">GUI Prototype Design</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row text-center g-3">
+                        <div class="col-md-3"><div class="border p-3 rounded-3 h-100"><strong>1. Home / Hero Screen</strong><br>Full-screen hero with CTA buttons</div></div>
+                        <div class="col-md-3"><div class="border p-3 rounded-3 h-100"><strong>2. Report Form</strong><br>Bootstrap card + full validation</div></div>
+                        <div class="col-md-3"><div class="border p-3 rounded-3 h-100"><strong>3. Dashboard</strong><br>Live reports + Interactive Leaflet Map</div></div>
+                        <div class="col-md-3"><div class="border p-3 rounded-3 h-100"><strong>4. Social Media</strong><br>Facebook &amp; Twitter/X feeds</div></div>
+                    </div>
+                    <p class="text-center mt-4 fw-bold text-success fs-5">
+                        ✅ The full website you are using right now is the complete implementation of this GUI Prototype.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function joinEvent(id) {
+            alert(`🎟️ Registered for Event #${id}!`);
+        }
+    </script>
+</body>
+</html>
